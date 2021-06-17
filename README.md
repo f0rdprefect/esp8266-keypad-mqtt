@@ -5,7 +5,27 @@ I used a Wingoneer keypad that came in a pack of 5 and just wired from left to r
 
 I don't really plan on doing much more with it and don't plan on offering support if you can't get it to work, as I'm definitely a n00b when it comes to this stuff.
 
-I did it in PlatformIO but it didn't seem to put the libraries in the folder like I've seen on other projects so you'll probably have to install them.
+# Setup
+
+I did it in PlatformIO to install the needed libraries use 
+
+```
+pio lib install
+```
+
+# Compile
+
+```
+pio run
+```
+
+# Upload to Wemos D1 mini
+
+```
+pio run --target upload 
+```
+
+# Usage
 
 By default it will send whatever number you punch in to /keypad/KEY on your MQTT broker when you press * on the keypad.
 
