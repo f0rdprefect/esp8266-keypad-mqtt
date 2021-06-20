@@ -4,14 +4,14 @@
 #include <Keypad.h>
 
 //WiFi info
-const char* ssid     = "SSID";         // SSID
-const char* password = "PASSPHRASE";     // Passphrase
+const char* ssid     = "tranquility";         // SSID
+const char* password = "gabbahey!holetsgo";     // Passphrase
 
 //MQTT info
-const char* mqttServer = "MQTTSERVER"; //MQTT Server
+const char* mqttServer = "smartberry"; //MQTT Server
 const int mqttPort = 1883; //MQTT Port
-const char* mqttUser = "MQTTUSER"; //MQTT User
-const char* mqttPassword = "MQTTPASS"; //MQTT Password
+const char* mqttUser = ""; //MQTT User
+const char* mqttPassword = ""; //MQTT Password
 
 //Keypad info
 const char sendKey = '*'; //Keypress to initialize send to MQTT
@@ -25,8 +25,8 @@ char keys[n_rows][n_cols] = { //Define values of keys
   {'*','0','P','D'}
 };
 
-byte colPins[n_rows] = {D3, D2, D1, D0}; //Define row pins
-byte rowPins[n_cols] = {D7, D6, D5, D4}; //Define column pins
+byte colPins[n_rows] = {D1, D2, D3, D4}; //Define row pins
+byte rowPins[n_cols] = {D0, D5, D6, D7}; //Define column pins
 
 Keypad Keypad1 = Keypad( makeKeymap(keys), rowPins, colPins, n_rows, n_cols);
 String fullKey;
